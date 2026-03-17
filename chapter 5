@@ -1,0 +1,16 @@
+import time
+import datetime
+
+# Tổng số giây từ Epoch (01/01/1970)
+total_seconds = time.time()
+
+# Tính số ngày đã trôi qua
+days = int(total_seconds // (24 * 60 * 60))
+
+# Lấy thời gian hiện tại theo GMT
+current_time = datetime.datetime.utcfromtimestamp(total_seconds)
+
+# In kết quả
+print(f"Tổng số giây từ Epoch: {total_seconds}")
+print(f"Số ngày đã trôi qua: {days} ngày")
+print(f"Thời gian hiện tại (GMT): {current_time.strftime('%H:%M:%S')}")
